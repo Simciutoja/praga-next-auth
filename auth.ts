@@ -2,6 +2,20 @@ import NextAuth from "next-auth";
 import Discord from "next-auth/providers/discord";
 import { SupabaseAdapter } from "@auth/supabase-adapter";
 
+declare module "next-auth" {
+  interface Session {
+    user: {
+      id: string;
+      role: string; // Add custom property here
+    } & DefaultSession["user"];
+  }
+
+  interface User {
+    id: string;
+    role: string; // Add custom property here
+  }
+}
+
 export const { handlers, signIn, signOut, auth } = NextAuth({
   providers: [
     Discord({
