@@ -5,13 +5,11 @@ import { SupabaseAdapter } from "@auth/supabase-adapter";
 declare module "next-auth" {
   interface Session {
     user: {
-      id: string;
       role: string; // Add custom property here
     } & DefaultSession["user"];
   }
 
   interface User {
-    id: string;
     role: string; // Add custom property here
   }
 }
