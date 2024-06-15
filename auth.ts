@@ -1,4 +1,4 @@
-import NextAuth from "next-auth";
+import NextAuth, { DefaultSession } from "next-auth";
 import Discord from "next-auth/providers/discord";
 import { SupabaseAdapter } from "@auth/supabase-adapter";
 
