@@ -32,7 +32,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
       return token;
     },
     session({ session, token }) {
-      session.user.role = token.role;
+      session.user.role = token.role as string; // Cast to string
       return session;
     },
   },
