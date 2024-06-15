@@ -24,7 +24,7 @@ export const KoalaWelcomeEmail = () => (
           Discord'a.
         </Text>
         <Section style={btnContainer}>
-          <Button style={button} href="http://localhost:3000/dashboard">
+          <Button style={button} href="http://panel.szbludnik.pl/dashboard">
             Przejdź do panelu
           </Button>
         </Section>
